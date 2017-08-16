@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <link rel="Stylesheet" href="style.css"/>
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Register</h1>
+
+      <p>
+        From here, you may  <a href="/login">login</a>, <a href="/register">register</a>, or <a href="/home">go back home</a>
+      </p>
+
+      <form method="POST" action="/register">
+        <input placeholder="username" name="username" />
+        <input placeholder="password" name="password" type="password" />
+        <button type="submit">register</button>
+      </form>
+
+      {{ #showErrors }}
+      <ul class="errors">
+        {{ #errors }}
+        <li>{{ . }}</li>
+        {{ /errors }}
+      </ul>
+      {{ /showErrors }}
+       
+    </div>
+
+
+
+  </body>
+</html>
